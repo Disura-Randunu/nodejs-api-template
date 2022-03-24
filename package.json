@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-api-template",
+  "version": "1.0.0",
+  "description": "A nodejs API template project to get started with your API application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Disura-Randunu/nodejs-api-template.git"
+  },
+  "author": "Disura Randunu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Disura-Randunu/nodejs-api-template/issues"
+  },
+  "homepage": "https://github.com/Disura-Randunu/nodejs-api-template#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
