@@ -3,7 +3,7 @@ An empty template NodeJS project to get started with your API application quickl
 
 - Includes most used starter packages to simplify things a bit.
 - Follows the component oriented project structure.
-- The goal is to create a proper tempalte project with good structure and which anyone can get started with their API project easily
+- The goal is to create a proper tempalte project with good structure so that anyone can get started with their API project easily
 
 <br>
 
