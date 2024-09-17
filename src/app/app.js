@@ -13,5 +13,8 @@ app.use(morgan)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-
+app.get('/', (req, res) => {
+    res.send('CrAzy Wraith IS BACK!')
+})
+  
 module.exports = app
