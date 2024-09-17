@@ -4,14 +4,6 @@ const logger = require('pino')()
 const { getApiErrRes } = require("../../utils/api_util");
 const { default: AppError } = require("./AppError");
 
-const getApiErrRes = (message, status_code = null) => {
-    return {
-        status : false,
-        message,
-        status_code,
-        data : null
-    }
-}
 
 const handleRouteError = (err) => {
   console.error(err)
