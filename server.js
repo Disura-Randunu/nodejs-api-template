@@ -8,5 +8,4 @@ const PORT = process.env.PORT || 8080
 
 app.listen(PORT, HOST, function(){
     console.log(`Server Started On - ${HOST}:${PORT}`)
-    
 })
