@@ -1,6 +1,7 @@
-require("dotenv").config()
+import dotenv from 'dotenv';
+import app from './src/app/app.js';
 
-const app = require("./src/app/app")
+dotenv.config();
 
 const HOST = process.env.HOST || "localhost"
 

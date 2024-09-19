@@ -1,22 +1,27 @@
 // Node Modules
-const path = require("path")
+// import path from 'path';
 
 // 3rd Party Modules
-const app = require("express")()
-const bodyParser = require('body-parser')
-const { errorHandlerMiddleware } = require("../common/middlewares/errorMiddleware")
-const morgan = require('morgan')('common')
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import { handleError } from '../middlewares/errorMiddleware.js';
+import AppError from '../errors/AppError.js';
+import countryAPI from '../components/country/countryAPI.js';
+
+const app = express();
 
 // Developer Modules
 
-
-app.use(morgan)
+app.use(morgan('common'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(errorHandlerMiddleware)
 
+app.use('/api/countries', countryAPI)
 app.get('/', (req, res) => {
     res.send('Made With ❤ In Sri Lanka')
 })
   
-module.exports = app
+app.use(handleError)
+
+export default app

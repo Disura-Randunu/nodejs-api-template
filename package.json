@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A nodejs API template project to get started with your API application",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node server",
     "dev": "nodemon server",

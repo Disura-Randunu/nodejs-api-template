@@ -1,16 +1,24 @@
 // Country API routes goes here
-const router = require("express").Router();
+import express from 'express';
+import AppError from '../../errors/AppError.js';
+import { getCountries, getCountryById } from './countryService.js';
+import { asyncHandler } from '../../utils/apiUtil.js';
+const router = express.Router();
 
-const { handleRouteError } = require("../../common/errors/errorHandler");
-const { getApiOkRes } = require("../../common/utils/apiUtil");
-const { getCountries } = require("./countryService");
+// import { getCountries } from './countryService.js';
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res, next) => {
   try {
-    const data = await getCountries();
-    return res.json(getApiOkRes("Ok", data));
-  } catch (error) {
-    const error_data = handleRouteError(error)
-    return res.status(error_data.status_code).json(getApiErrRes (error_data.message, error_data.status_code));
+    const data = await getCountries()
+    return res.json({ data: data });
+  } catch (err) {
+    return next(err)
   }
 });
+
+router.get("/:id", asyncHandler((req) => {
+    getCountryById()
+  })
+)
+
+export default router;
