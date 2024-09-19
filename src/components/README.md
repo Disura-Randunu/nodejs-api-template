@@ -1,2 +1,3 @@
 Application Components goes here
 Ex: User, Department, Country, etc...
+Every Component will have an API(Controller) file, a Service file and a Model File

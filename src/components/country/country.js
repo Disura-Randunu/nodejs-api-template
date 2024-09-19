@@ -1,1 +1,1 @@
-// Country model goes here
+// Model goes here

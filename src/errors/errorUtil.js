@@ -1,19 +1,21 @@
 import AppError from "./AppError.js"
+import axios from 'axios'
 
-const getApiErrRes = (message, status_code = null) => {
+const getApiErrRes = (message, status_code = null, print_stack = true) => {
     return {
         status: false,
         message,
         status_code,
-        data: null
+        data: null,
+        print_stack: print_stack
     }
 }
 
 export const getErrorData = (err) => {
     if (err instanceof AppError) {
-        return getApiErrRes(err.message, err.status_code)
+        return getApiErrRes(err.message, err.status_code, err.print_stack)
     }
-    if (err instanceof AxiosError) {
+    if (axios.isAxiosError(err)) {
         if (err.response) {
             if (err.response.data) {
                 if (err.response.data.message) {
