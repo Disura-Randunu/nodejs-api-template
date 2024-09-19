@@ -20,15 +20,13 @@
   },
   "homepage": "https://github.com/Disura-Randunu/nodejs-api-template#readme",
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^1.7.7",
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
+    "express": "^4.21.0",
     "helmet": "^5.0.2",
     "moment": "^2.29.1",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.6"
   }
 }
