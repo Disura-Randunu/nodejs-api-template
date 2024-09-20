@@ -1,4 +1,4 @@
-import { getErrorData } from "../errors/errorUtil.js";
+import { getErrorData } from "../errors/AppError.js";
 
 export function handleError(err, req, res, next) {
     const errorData = getErrorData(err)
